@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact – Infinity Stores</title>
+  <link rel="stylesheet" href="style (2).css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <div class="navbar">
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul class="navlist" id="navlist">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="products.html">PRODUCTS</a></li>
+      <li><a href="services.html">SERVICES</a></li>
+      <li><a href="about.html">ABOUT US</a></li>
+      <li><a href="contact.html">CONTACTS</a></li>
+    </ul>
+  </div>
+
+  <div class="body">
+
+    <section>
+      <h1>INFINITY STORES</h1>
+    </section>
+
+    <div class="page-banner">
+      <h1>Contact Us</h1>
+      <p>We'd love to hear from you. Reach out anytime — we're always happy to help.</p>
+    </div>
+
+    <!-- Contact Layout -->
+    <div class="contact-layout">
+
+      <!-- Left: Info -->
+      <div class="contact-info">
+        <h2>Get In Touch</h2>
+        <p>Whether you have a product query, need help with an order, want to place a bulk purchase or just want to say hello — we're here for you.</p>
+
+        <div class="contact-detail-list">
+
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="contact-detail-text">
+              <strong>Visit Us</strong>
+              <span>Hirsons Plaza, Kamukunji, Nairobi — Shop No. 123</span>
+            </div>
+          </div>
+
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="contact-detail-text">
+              <strong>Call Us</strong>
+              <span>+254 712 345 678</span>
+            </div>
+          </div>
+
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <div class="contact-detail-text">
+              <strong>WhatsApp</strong>
+              <span>+254 712 345 678</span>
+            </div>
+          </div>
+
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="contact-detail-text">
+              <strong>Email Us</strong>
+              <span>infinitystores@gmail.com</span>
+            </div>
+          </div>
+
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+            <div class="contact-detail-text">
+              <strong>Opening Hours</strong>
+              <span>Mon–Sat: 8:00 am – 7:00 pm &nbsp;|&nbsp; Sun: 10:00 am – 4:00 pm</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="contact-form-card">
+        <h2>Send Us a Message</h2>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" placeholder="e.g. John">
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" placeholder="e.g. Kamau">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="you@example.com">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="+254 700 000 000">
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <select id="subject">
+            <option value="">Select a subject…</option>
+            <option>General Enquiry</option>
+            <option>Product Query</option>
+            <option>Bulk Order Request</option>
+            <option>Delivery / Order Status</option>
+            <option>Returns & Exchanges</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Tell us how we can help you…"></textarea>
+        </div>
+
+        <button class="form-submit" onclick="submitForm()">Send Message &nbsp;<i class="fa-solid fa-paper-plane" style="color:#fff;margin:0;"></i></button>
+
+        <p id="form-success" style="display:none;margin-top:1rem;color:#28a050;font-size:.9rem;text-align:center;font-weight:500;">
+          ✅ Message sent! We'll get back to you within 2 hours.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Map -->
+    <div class="map-section">
+      <h2>Find Us</h2>
+      <div class="map-placeholder">
+        <i class="fa-solid fa-map-location-dot"></i>
+        <p>Hirsons Plaza, Kamukunji, Nairobi</p>
+        <span>Shop Number 123 — Ground Floor</span>
+      </div>
+    </div>
+
+  </div><!-- /body -->
+
+  <div class="copyright">
+    <p>&copy; 2026 Infinity Stores. All rights reserved.</p>
+  </div>
+
+  <script src="navbar.js"></script>
+  <script>
+    function submitForm() {
+      const fname = document.getElementById('fname').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (!fname || !email || !message) {
+        alert('Please fill in your name, email and message before sending.');
+        return;
+      }
+
+      document.getElementById('form-success').style.display = 'block';
+      // Clear form
+      ['fname','lname','email','phone','message'].forEach(id => {
+        document.getElementById(id).value = '';
+      });
+      document.getElementById('subject').selectedIndex = 0;
+    }
+  </script>
+</body>
+</html>

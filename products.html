@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products – Infinity Stores</title>
+  <link rel="stylesheet" href="style (2).css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <div class="navbar">
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul class="navlist" id="navlist">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="products.html">PRODUCTS</a></li>
+      <li><a href="services.html">SERVICES</a></li>
+      <li><a href="about.html">ABOUT US</a></li>
+      <li><a href="contact.html">CONTACTS</a></li>
+    </ul>
+  </div>
+
+  <div class="body">
+
+    <section>
+      <h1>INFINITY STORES</h1>
+    </section>
+
+    <div class="page-banner">
+      <h1>Our Products</h1>
+      <p>Quality products at affordable prices — delivered right to your door.</p>
+    </div>
+
+    <div class="products-page-intro">
+      <p>Browse our full catalogue of carefully selected products across toys, stationery, sports equipment and more. Every item is chosen for quality, durability and value.</p>
+    </div>
+
+    <!-- Filter bar -->
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterProducts('all', this)">All Products</button>
+      <button class="filter-btn" onclick="filterProducts('toys', this)">Children Toys</button>
+      <button class="filter-btn" onclick="filterProducts('stationery', this)">Stationery</button>
+      <button class="filter-btn" onclick="filterProducts('sports', this)">Sports</button>
+    </div>
+
+    <!-- Products grid -->
+    <div class="products-grid" id="productsGrid">
+
+      <!-- TOYS -->
+      <div class="prod-card" data-category="toys">
+        <div class="prod-card-img" style="background:#fef3e2;">
+          <img src="blocks.jpg" alt="Building Blocks Set" style="width:100%;height:180px;object-fit:cover;" onerror="this.style.display='none';this.parentElement.innerHTML='🧸';">
+        </div>
+        <div class="prod-card-body">
+          <div class="prod-card-category">Children Toys</div>
+          <div class="prod-card-name">Building Blocks Set</div>
+          <div class="prod-card-desc">Colourful wooden building blocks for kids aged 2–8. Encourages creativity, motor skills and imaginative play. 120-piece set in a carry case.</div>
+          <div class="prod-card-footer">
+            <span class="prod-price">KSh 1,200</span>
+            <span class="prod-badge instock">In Stock</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-card" data-category="toys">
+        <div class="prod-card-body">
+                    <img src="remote car.jpg" alt="Remote Control Car" style="width:100%;height:180px;object-fit:cover;"">
+
+          <div class="prod-card-category">Children Toys</div>
+          <div class="prod-card-name">Remote Control Car</div>
+          <div class="prod-card-desc">High-speed RC car with full directional control. Suitable for ages 6+. Includes rechargeable battery and USB charging cable. Range up to 30m.</div>
+          <div class="prod-card-footer">
+            <span class="prod-price">KSh 2,500</span>
+            <span class="prod-badge popular">Popular</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-card" data-category="toys">
+        <div class="prod-card-body">
+                    <img src="numbers table.webp" alt="Educational Puzzle Board" style="width:100%;height:180px;object-fit:cover;">
+
+          <div class="prod-card-category">Children Toys</div>
+          <div class="prod-card-name">Educational Puzzle Board</div>
+          <div class="prod-card-desc">Interactive puzzle board with numbers, letters and shapes. Helps children develop cognitive skills and hand-eye coordination. Ages 3–7.</div>
+          <div class="prod-card-footer">
+            <span class="prod-price">KSh 850</span>
+            <span class="prod-badge instock">In Stock</span>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <!-- STATIONERY -->
+      <div class="prod-card" data-category="stationery">
+        <div class="prod-card-img" style="background:#f0f4fe;">
+          <img src="stationary.jpg" alt="School Stationery Set" style="width:100%;height:200px;object-fit:cover;" onerror="this.style.display='none';this.parentElement.innerHTML='✏️';this.parentElement.style.fontSize='4rem';">
+        </div>
+        <div class="prod-card-body">
+          <div class="prod-card-category">Stationery</div>
+          <div class="prod-card-name">Complete School Kit</div>
+          <div class="prod-card-desc">All-in-one school stationery kit including pens, pencils, rulers, erasers, sharpeners and a geometry set. Ideal for primary and secondary students.</div>
+          <div class="prod-card-footer">
+            <span class="prod-price">KSh 650</span>
+            <span class="prod-badge popular">Popular</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-card" data-category="stationery">
+        <div class="prod-card-body">
+                    <img src="notebook.jpg" alt="Premium Notebook Bundle" style="width:100%;height:150px;object-fit:cover;">
+
+          <div class="prod-card-category">Stationery</div>
+          <div class="prod-card-name">Premium Notebook Bundle</div>
+          <div class="prod-card-desc">Pack of 5 high-quality A4 hardcover notebooks with 200 pages each. Available in ruled, plain and dotted variants. Ideal for school and office use.</div>
+          <div class="prod-card-footer">
+            <span class="prod-price">KSh 950</span>
+            <span class="prod-badge instock">In Stock</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-card" data-category="stationery">
+        <div class="prod-card-body">
+          <img src="pencils.jpg" alt="Pencils"style="width:100%;height:200px;object-fit:cover;">
+          <div class="prod-card-category">Stationery</div>
+          <div class="prod-card-name">Artist Colour Pencils Set</div>
+          <div class="prod-card-desc">Professional-grade 72-colour pencil set for drawing, colouring and sketching. Smooth pigment, break-resistant core, in a durable tin case.</div>
+          <div class="prod-card-footer">
+            <span class="prod-price">KSh 1,100</span>
+            <span class="prod-badge instock">In Stock</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-card" data-category="stationery">
+        <div class="prod-card-body">
+          <img src="backpack.jpg" alt="Backpack"style="width:100%;height:200px;object-fit:cover;">
+          <div class="prod-card-category">Stationery</div>
+          <div class="prod-card-name">School Backpack</div>
+          <div class="prod-card-desc">Spacious, ergonomic school bag with padded shoulder straps and multiple compartments. Water-resistant nylon fabric. Available in 4 colours.</div>
+          <div class="prod-card-footer">
+            <span class="prod-price">KSh 1,800</span>
+            <span class="prod-badge popular">Popular</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SPORTS -->
+      <div class="prod-card" data-category="sports">
+        <div class="prod-card-img" style="background:#f0fef4;">
+          <img src="sports.jpeg" alt="Sports Equipment" style="width:100%;height:200px;object-fit:cover;" onerror="this.style.display='none';this.parentElement.innerHTML='⚽';this.parentElement.style.fontSize='4rem';">
+        </div>
+        <div class="prod-card-body">
+          <div class="prod-card-category">Sports</div>
+          <div class="prod-card-name">Football (Size 5)</div>
+          <div class="prod-card-desc">FIFA-standard size 5 football with reinforced stitching and high-durability PU leather cover. Suitable for grass, turf and indoor surfaces.</div>
+          <div class="prod-card-footer">
+            <span class="prod-price">KSh 1,400</span>
+            <span class="prod-badge instock">In Stock</span>
+          </div>
+        </div>
+      </div>
+
+    
+
+      <div class="prod-card" data-category="sports">
+        <div class="prod-card-body">
+          <img src="rope.webp" alt="Jump rope"style= width:100%;height:200px;object-fit:cover;>
+          <div class="prod-card-category">Sports</div>
+          <div class="prod-card-name">Jump Rope – Pro Grade</div>
+          <div class="prod-card-desc">Speed jump rope with steel cable, ball-bearing handles and adjustable length. Perfect for cardio, boxing training and general fitness. Ages 8+.</div>
+          <div class="prod-card-footer">
+            <span class="prod-price">KSh 600</span>
+            <span class="prod-badge instock">In Stock</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /products-grid -->
+
+    <!-- CTA -->
+    <div class="cta-banner">
+      <h2>Can't find what you're looking for?</h2>
+      <p>We handle bulk orders and custom requests. Get in touch and we'll sort you out.</p>
+      <a href="contact.html" class="btn">Contact Us</a>
+    </div>
+
+  </div><!-- /body -->
+
+  <div class="copyright">
+    <p>&copy; 2026 Infinity Stores. All rights reserved.</p>
+  </div>
+
+  <script src="navbar.js"></script>
+  <script>
+    function filterProducts(category, btn) {
+      // Update active button
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      // Show/hide cards
+      document.querySelectorAll('.prod-card').forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
